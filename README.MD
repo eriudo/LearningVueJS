@@ -6,7 +6,9 @@
     <ul>
       <h4><li>Vue.js</li></h4>
        Vue is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be  incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with A modern tooling  and  <a href="https://github.com/vuejs/awesome-vue#components--libraries"> supporting libraries.</a>
+ps: for this project I will use the script tag to initi the VueJs: <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> and for every topic I will make exercises.
       <h4><li>Composing with Components</li></h4>
+      
      </ul> 
   <h3><li> The Vue Instance </h3></li>
       <ul>
