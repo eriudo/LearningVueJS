@@ -9,7 +9,7 @@
 ps: for this project I will use the import method import Vue from "https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js" and for every topic I will make exercises.
   ps2: In this case using the import, we want to pass the vars to window for manipulation, then when we create the module we must put the window, like window.app = new Vue...  
       
-      <h4><li>Composing with Components</li></h4>
+   <h4><li>Composing with Components</li></h4>
 
      </ul> 
   <h3><li> The Vue Instance </h3></li>
