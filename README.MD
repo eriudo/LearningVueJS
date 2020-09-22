@@ -7,9 +7,10 @@
       <h4><li>Vue.js</li></h4>
        Vue is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be  incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with A modern tooling  and  <a href="https://github.com/vuejs/awesome-vue#components--libraries"> supporting libraries.</a>
 ps: for this project I will use the import method import Vue from "https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js" and for every topic I will make exercises.
-      <h4><li>Composing with Components</li></h4>
-ps2: In this case using the import, we want to pass the vars to window for manipulation, then when we create the module we must put the window, like window.app = new Vue...  
+  ps2: In this case using the import, we want to pass the vars to window for manipulation, then when we create the module we must put the window, like window.app = new Vue...  
       
+      <h4><li>Composing with Components</li></h4>
+
      </ul> 
   <h3><li> The Vue Instance </h3></li>
       <ul>
