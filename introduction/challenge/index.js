@@ -4,10 +4,11 @@ window.app = new Vue({
   data: {
     message: "",
     lista: [],
+    idTracker: 0,
   },
   methods: {
     enviado: function () {
-      this.lista.push(this.message);
+      this.lista.push({ id: this.idTracker++, text: this.message });
       this.message = "";
     },
     apagar: function (index) {

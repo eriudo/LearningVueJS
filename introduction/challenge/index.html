@@ -9,8 +9,8 @@
     Item: <input type="text" v-model="message" name="itemList" />
     <input type="submit" v-bind:disabled="message === ''" value="Enviar" />
     <ul>
-      <li v-for="Item, index in lista" v-bind:key="Item">
-        {{ Item }} <button v-on:click="apagar(index)">apagar</button>
+      <li v-for="Item, index in lista" v-bind:key="Item.id">
+        {{ Item.text}} <button v-on:click="apagar(index)">apagar</button>
       </li>
     </ul>
   </form>
