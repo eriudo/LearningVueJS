@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link href="style.css" rel="stylesheet" />
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <form name="myForm" v-on:submit.prevent="enviado" id="form">
-    Item: <input type="text" v-model="message" name="itemList" />
-    <input type="submit" v-bind:disabled="message === ''" value="Enviar" />
-    <ul>
-      <li v-for="Item, index in lista" v-bind:key="Item.id">
-        {{ Item.text}} <button v-on:click="apagar(index)">apagar</button>
-      </li>
-    </ul>
-  </form>
+  <div class="form-container">
+    <div class="title-content">
+      <h1 class="title">STEPS TO WIN</h1>
+      <img src="./icons/o-comunismo.svg" width="50" height="50" />
+    </div>
+    <form name="myForm" v-on:submit.prevent="enviado" id="form" class="title">
+      New Item:
+      <input type="text" class="inputItem" v-model="message" name="itemList" />
+      <input
+        type="submit"
+        class="addButton"
+        v-bind:disabled="message === ''"
+        value="+"
+      />
+      <ul>
+        <li
+          v-for="Item, index in lista"
+          v-bind:key="Item.id"
+          v-bind:style="Item.style"
+        >
+          {{ Item.text}}
+          <button v-on:click="apagar(index)" class="material-icons">
+            delete
+          </button>
+          <button v-on:click="done(index)" type="button" class="material-icons">
+            done
+          </button>
+          <button
+            v-on:click="cancel(index)"
+            type="button"
+            class="material-icons"
+          >
+            clear
+          </button>
+        </li>
+      </ul>
+    </form>
+  </div>
   <script type="module" src="index.js"></script>
   <body></body>
 </html>

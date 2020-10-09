@@ -8,11 +8,21 @@ window.app = new Vue({
   },
   methods: {
     enviado: function () {
-      this.lista.push({ id: this.idTracker++, text: this.message });
+      this.lista.push({
+        id: this.idTracker++,
+        text: this.message,
+        style: "background-color: yellow",
+      });
       this.message = "";
     },
     apagar: function (index) {
       this.lista.splice(index, 1);
+    },
+    done: function (index) {
+      this.lista[index].style = "background-color: green";
+    },
+    cancel: function (index) {
+      this.lista[index].style = "background-color: red";
     },
   },
 });
