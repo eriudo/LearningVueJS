@@ -31,11 +31,11 @@
       <ul>
         <todo-item
           class="item-row"
-          v-for="Item, index in lista"
+          v-for="item, index in lista"
           v-bind:index="index"
-          v-bind:todo="Item"
-          v-bind:key="Item.id"
-          v-bind:style="Item.style"
+          v-bind:item="item"
+          v-bind:key="item.id"
+          v-bind:style="getTodoStyle(item.status)"
           v-bind:erase="erase"
           v-bind:done="done"
           v-bind:cancel="cancel"
