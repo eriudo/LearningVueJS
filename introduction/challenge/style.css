@@ -48,6 +48,7 @@ ul {
   line-height: 1.5;
   justify-content: space-between;
   word-break: break-all;
+  transition: background-color 0.5s;
 }
 .control-buttons {
   display: flex;
@@ -61,4 +62,21 @@ ul {
 }
 .delete-button:hover {
   color: red;
+}
+@keyframes LefttoRight {
+  0% {
+    transform: translate(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+[data-animation="LefttoRight"] {
+  animation-name: LefttoRight;
+  animation-duration: 0.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
