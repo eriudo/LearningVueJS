@@ -1,8 +1,9 @@
 .form-container {
   display: flex;
-  width: 700px;
+  border: solid 2px;
+  box-shadow: 1px 0.5px 2px 1px rgba(103, 103, 105, 0.2);
   height: 700px;
-  background-color: beige;
+  background-color: white;
   flex-direction: column;
   align-items: center;
 }
@@ -13,21 +14,21 @@ button {
   padding: 0;
   background-color: white;
 }
+ul {
+  padding-right: 15px;
+  padding-left: 0px;
+}
 .material-icons {
   font-family: "Material Icons";
   background: transparent;
+  font-size: 20px;
 }
 .title-content {
   display: flex;
   align-items: center;
 }
-.title {
-}
-#form {
-}
 .addButton {
   font-size: 20px;
-  color: rgba(103, 103, 105, 0.2);
   width: 30px;
   height: 30px;
   background-color: rgba(193, 243, 193, 0.747);
@@ -37,5 +38,27 @@ button {
 .inputItem {
   border: none;
   border-bottom: 1px solid #ccc;
-  background-color: beige;
+}
+.item-row {
+  display: flex;
+  padding: 3px;
+  border: 1px solid;
+  margin-bottom: 2px;
+  box-shadow: 1px 0.5px 2px 1px rgba(103, 103, 105, 0.2);
+  line-height: 1.5;
+  justify-content: space-between;
+  word-break: break-all;
+}
+.control-buttons {
+  display: flex;
+  border: 1px solid;
+}
+.done-button:hover {
+  color: green;
+}
+.cancel-button:hover {
+  color: red;
+}
+.delete-button:hover {
+  color: red;
 }

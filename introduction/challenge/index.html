@@ -16,10 +16,10 @@
   </head>
   <div class="form-container">
     <div class="title-content">
-      <h1 class="title">STEPS TO WIN</h1>
+      <h1 class="title">TASKS TO DO THIS YEAR</h1>
       <img src="./icons/o-comunismo.svg" width="50" height="50" />
     </div>
-    <form name="myForm" v-on:submit.prevent="enviado" id="form" class="title">
+    <form name="myForm" v-on:submit.prevent="sended" id="form" class="title">
       New Item:
       <input type="text" class="inputItem" v-model="message" name="itemList" />
       <input
@@ -29,26 +29,18 @@
         value="+"
       />
       <ul>
-        <li
+        <todo-item
+          class="item-row"
           v-for="Item, index in lista"
+          v-bind:index="index"
+          v-bind:todo="Item"
           v-bind:key="Item.id"
           v-bind:style="Item.style"
+          v-bind:erase="erase"
+          v-bind:done="done"
+          v-bind:cancel="cancel"
         >
-          {{ Item.text}}
-          <button v-on:click="apagar(index)" class="material-icons">
-            delete
-          </button>
-          <button v-on:click="done(index)" type="button" class="material-icons">
-            done
-          </button>
-          <button
-            v-on:click="cancel(index)"
-            type="button"
-            class="material-icons"
-          >
-            clear
-          </button>
-        </li>
+        </todo-item>
       </ul>
     </form>
   </div>
