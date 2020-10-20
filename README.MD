@@ -10,7 +10,7 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
   ps2: In this case using the import, we want to pass the vars to window for manipulation, then when we create the module we must put the window, like window.app = new Vue...  
       
    <h4><li>Composing with Components</li></h4>
-      The component system it’s an abstraction that allows us to build large-scale applications composed of small, self-contained, and often reusable components. Remenber that any type of application interface can be abstracted into a tree of components, In Vue, a component is essentially a Vue instance with pre-defined options. For us its interesting modify the component definition to make it accept a <a href="https://vuejs.org/v2/guide/components.html#Passing-Data-to-Child-Components-with-Props"> prop</a>, if we need to pass data from the parent scope into child components. Like in the case todo-list.
+      The component system it’s an abstraction that allows us to build large-scale applications composed of small, self-contained, and often reusable components. Remenber that any type of application interface can be abstracted into a tree of components, In Vue, a component is essentially a Vue instance with pre-defined options. For us its interesting modify the component definition to make it accept a <a href="https://vuejs.org/v2/guide/components.html#Passing-Data-to-Child-Components-with-Props"> prop</a>, if we need to pass data from the parent scope into child components. Like in the case <a href="https://github.com/eriudo/LearningVueJS/tree/master/introduction/challenge> todo-list </a>.
      
   <h3><li> The Vue Instance </h3></li>
       <ul>
