@@ -16,7 +16,7 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
       <ul>
       <h4><li>Creating a Vue Instance</li></h4>
         Every Vue application starts by creating a new Vue instance with the Vue function: 
-  ``` var vm = new Vue({
+  ```javascript var vm = new Vue({
       //options
   )} ```
       <h4><li>Data and Methods</li></h4>
