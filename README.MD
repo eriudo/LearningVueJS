@@ -40,11 +40,11 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
    PS: with the use of v-once, the msg cant be altered, if the data change.
     The double mustaches interprets the data as plain text, not HTML. In order to output real HTML, you will need to use the v-html directive: 
     
-    "<p>Using mustaches: {{ rawHtml }}</p>
-     <p>Using v-html directive: <span v-html="rawHtml"></span></p>"
+    <p>Using mustaches: {{ rawHtml }}</p>
+     <p>Using v-html directive: <span v-html="rawHtml"></span></p>
      
-   Mustaches cannot be used inside HTML attributes. Instead, use a v-bind directive: ```
-   "<div v-bind:id="dynamicId"></div>"```
+   Mustaches cannot be used inside HTML attributes. Instead, use a v-bind directive: ```javascript
+   <div v-bind:id="dynamicId"></div>```
    <h4><li>Directives</li></h4>
       <h4><li>Shorthands</li></h4>
      </ul> 
