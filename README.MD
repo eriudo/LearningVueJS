@@ -18,7 +18,7 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
         Every Vue application starts by creating a new Vue instance with the Vue function. We often use the variable vm (short for ViewModel) to refer to our Vue instance. 
   When you create a Vue instance, you pass in an options object for reference. A Vue application consists of a root Vue instance created with new Vue, optionally organized into a tree of nested, reusable components, all Vue components are also Vue instances, and so accept the same options object (except for a few root-specific options).
       <h4><li>Data and Methods</li></h4>
-        When a Vue instance is created, it adds all the properties found in its data object to Vue’s reactivity system. When the values of those properties change, the view will “react”, updating to match the new values. >>EXAMPLE<< 
+        When a Vue instance is created, it adds all the properties found in its data object to Vue’s reactivity system. When the values of those properties change, the view will “react”, updating to match the new values. <a href="https://github.com/eriudo/LearningVueJS/blob/master/vueInstance/index.js"> Example</a> 
   be note that properties in data are only reactive if they existed when the instance was created. That means if you add a new property, like:
   
   ```javascript
