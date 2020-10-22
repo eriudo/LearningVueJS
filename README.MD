@@ -33,10 +33,12 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
       <ul>
       <h4><li>Interpolations</li></h4>
         The most basic form of data binding is text interpolation using the “Mustache” syntax (double curly braces):
+  
           ```javascript
              <span>Message: {{ msg }}</span>
           ``` 
-      <h4><li>Directives</li></h4>
+          
+   <h4><li>Directives</li></h4>
       <h4><li>Shorthands</li></h4>
      </ul> 
   <h3><li> Computed Propertiers and Watchers </h3></li>
