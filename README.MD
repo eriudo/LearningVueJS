@@ -35,7 +35,7 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
         The most basic form of data binding is text interpolation using the “Mustache” syntax (double curly braces):
   
           
-             <span>Message: {{ msg }}</span>
+       <span>Message: {{ msg }}</span>
           
           
    <h4><li>Directives</li></h4>
