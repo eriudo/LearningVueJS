@@ -24,7 +24,9 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
   ```javascript
     vm.b = 'hi'
   ```
-  <h4><li>Instance Lifecycle Hooks</li></h4>
+   Then changes to b will not trigger any view updates. If you know you’ll need a property later, but it starts out empty or non-existent, you’ll need to set some initial value. 
+  PS: The only exception to this being the use of Object.freeze(), which prevents existing properties from being changed, which also means the reactivity system can’t track changes.
+    Vue instances expose a number of useful instance properties and methods. These are prefixed with $.    
   </ul> 
   <h3><li> Template Syntax </h3></li>
       <ul>
