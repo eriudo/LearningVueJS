@@ -21,9 +21,9 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
         When a Vue instance is created, it adds all the properties found in its data object to Vue’s reactivity system. When the values of those properties change, the view will “react”, updating to match the new values. <a href="https://github.com/eriudo/LearningVueJS/blob/master/vueInstance/index.js"> Example</a> 
   be note that properties in data are only reactive if they existed when the instance was created. That means if you add a new property, like:
   
-  ```javascript
+  
     vm.b = 'hi'
-  ```
+
    Then changes to b will not trigger any view updates. If you know you’ll need a property later, but it starts out empty or non-existent, you’ll need to set some initial value. 
   PS: The only exception to this being the use of Object.freeze(), which prevents existing properties from being changed, which also means the reactivity system can’t track changes.
     Vue instances expose a number of useful instance properties and methods. These are prefixed with $.    
