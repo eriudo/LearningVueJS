@@ -24,8 +24,8 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
   ```javascript
     vm.b = 'hi'
   ```
-      <h4><li>Instance Lifecycle Hooks</li></h4>
-     </ul> 
+  <h4><li>Instance Lifecycle Hooks</li></h4>
+  </ul> 
   <h3><li> Template Syntax </h3></li>
       <ul>
       <h4><li>Interpolations</li></h4>
