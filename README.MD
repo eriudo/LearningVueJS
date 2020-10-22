@@ -55,11 +55,13 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
     Here attributeName will be dynamically evaluated as a JavaScript expression, and its evaluated value will be used as the final value for the argument. Modifiers are special postfixes denoted by a dot, which indicate that a directive should be bound in some special way. For example, the .prevent modifier tells the v-on directive to call event.preventDefault().
       <h4><li>Shorthands</li></h4>
       Vue provides special shorthands for two of the most often used directives, v-bind and v-on:
+      
       ``` <!-- full syntax -->
           <a v-bind:href="url"> ... </a>
           <!-- short hand --->
           <a :href="url"> ... </a>
           ```      
+          
    </ul> 
   <h3><li> Computed Propertiers and Watchers </h3></li>
       <ul>
