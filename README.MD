@@ -33,11 +33,18 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
       <ul>
       <h4><li>Interpolations</li></h4>
         The most basic form of data binding is text interpolation using the “Mustache” syntax (double curly braces):
-  
           
        <span>Message: {{ msg }}</span>
           
-          
+   The mustache tag will be replaced with the value of the msg property on the corresponding data object. It will also be updated whenever the data object’s msg property changes.       
+   PS: with the use of v-once, the msg cant be altered, if the data change.
+    The double mustaches interprets the data as plain text, not HTML. In order to output real HTML, you will need to use the v-html directive: 
+    
+    "<p>Using mustaches: {{ rawHtml }}</p>
+     <p>Using v-html directive: <span v-html="rawHtml"></span></p>"
+     
+   Mustaches cannot be used inside HTML attributes. Instead, use a v-bind directive: ```
+   "<div v-bind:id="dynamicId"></div>"```
    <h4><li>Directives</li></h4>
       <h4><li>Shorthands</li></h4>
      </ul> 
