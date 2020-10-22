@@ -43,7 +43,7 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
     <p>Using mustaches: {{ rawHtml }}</p>
      <p>Using v-html directive: <span v-html="rawHtml"></span></p>
      
-   Mustaches cannot be used inside HTML attributes. Instead, use a v-bind directive: ```javascript
+   Mustaches cannot be used inside HTML attributes. Instead, use a v-bind directive: ```
    <div v-bind:id="dynamicId"></div>```
    <h4><li>Directives</li></h4>
       <h4><li>Shorthands</li></h4>
