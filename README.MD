@@ -56,11 +56,15 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
       <h4><li>Shorthands</li></h4>
       Vue provides special shorthands for two of the most often used directives, v-bind and v-on:
       
-      ``` <!-- full syntax -->
+       <!-- full syntax -->
           <a v-bind:href="url"> ... </a>
           <!-- short hand --->
           <a :href="url"> ... </a>
-          ```      
+       <!-- full syntax -->
+          <a v-on:click="doSomething"> ... </a>
+          <!-- short hand --->
+         <a @click="doSomething"> ... </a>
+          
           
    </ul> 
   <h3><li> Computed Propertiers and Watchers </h3></li>
