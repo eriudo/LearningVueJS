@@ -44,9 +44,23 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
      <p>Using v-html directive: <span v-html="rawHtml"></span></p>
      
    Mustaches cannot be used inside HTML attributes. Instead, use a v-bind directive: ```<div v-bind:id="dynamicId"></div>```
+    In the case of boolean attributes, where their mere existence implies true, v-bind works a little differently, If the atribute has the value of null, undefined, or false, the disabled attribute will not even be included in the rendered.
+    So far we’ve only been binding to simple property keys in our templates. But Vue.js actually supports the full power of JavaScript expressions inside all data bindings.
+    One restriction is that each binding can only contain one single expression.
+
    <h4><li>Directives</li></h4>
+    Directives are special attributes with the v- prefix. Directive attribute values are expected to be a single JavaScript expression (with the exception of v-for, which will be discussed later). A directive’s job is to reactively apply side effects to the DOM when the value of its expression changes. Let’s review the example we saw in the introduction:
+   <a href="https://github.com/eriudo/LearningVueJS/blob/master/introduction/index.html"> here</a>
+    Some directives can take an “argument”, denoted by a colon after the directive name. Starting in version 2.6.0, it is also possible to use a JavaScript expression in a directive argument by wrapping it with square brackets: ```<a v-bind:[attributeName]="url"> ... </a>```
+    Here attributeName will be dynamically evaluated as a JavaScript expression, and its evaluated value will be used as the final value for the argument. Modifiers are special postfixes denoted by a dot, which indicate that a directive should be bound in some special way. For example, the .prevent modifier tells the v-on directive to call event.preventDefault().
       <h4><li>Shorthands</li></h4>
-     </ul> 
+      Vue provides special shorthands for two of the most often used directives, v-bind and v-on:
+      ``` <!-- full syntax -->
+          <a v-bind:href="url"> ... </a>
+          <!-- short hand --->
+          <a :href="url"> ... </a>
+          ```      
+   </ul> 
   <h3><li> Computed Propertiers and Watchers </h3></li>
       <ul>
       <h4><li>Computed Properties</li></h4>
