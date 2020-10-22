@@ -20,7 +20,9 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
       <h4><li>Data and Methods</li></h4>
         When a Vue instance is created, it adds all the properties found in its data object to Vue’s reactivity system. When the values of those properties change, the view will “react”, updating to match the new values. >>EXAMPLE<< 
   be note that properties in data are only reactive if they existed when the instance was created. That means if you add a new property, like:
-  ~~~vm.b = 'hi'~~~
+  ```javascript
+    vm.b = 'hi'
+  ```
       <h4><li>Instance Lifecycle Hooks</li></h4>
      </ul> 
   <h3><li> Template Syntax </h3></li>
