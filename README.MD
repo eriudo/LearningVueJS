@@ -29,8 +29,13 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
     Vue instances expose a number of useful instance properties and methods. These are prefixed with $.    
   </ul> 
   <h3><li> Template Syntax </h3></li>
+  Vue compiles the templates into Virtual DOM render functions. Combined with the reactivity system, Vue is able to intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
       <ul>
       <h4><li>Interpolations</li></h4>
+        The most basic form of data binding is text interpolation using the “Mustache” syntax (double curly braces):
+          ```javascript
+             <span>Message: {{ msg }}</span>
+          ``` 
       <h4><li>Directives</li></h4>
       <h4><li>Shorthands</li></h4>
      </ul> 
