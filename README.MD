@@ -68,6 +68,7 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
           
    </ul> 
   <h3><li> Computed Propertiers and Watchers </h3></li>
+    When you want a complex logic in your templates, you should use Computed Property, to dont make your template bloated and hard to maintain. <BASIC EXAMPLE>
       <ul>
       <h4><li>Computed Properties</li></h4>
       <h4><li>Watchers</li></h4>
