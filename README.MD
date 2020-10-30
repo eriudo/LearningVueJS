@@ -24,9 +24,10 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
   
     vm.b = 'hi'
 
-   Then changes to b will not trigger any view updates. If you know you’ll need a property later, but it starts out empty or non-existent, you’ll need to set some initial value. 
-  PS: The only exception to this being the use of Object.freeze(), which prevents existing properties from being changed, which also means the reactivity system can’t track changes.
-    Vue instances expose a number of useful instance properties and methods. These are prefixed with $.    
+Then changes to b will not trigger any view updates. If you know you’ll need a property later, but it starts out empty or non-existent, you’ll need to set some initial value.
+PS: The only exception to this being the use of Object.freeze(), which prevents existing properties from being changed, which also means the reactivity system can’t track changes.
+Vue instances expose a number of useful instance properties and methods. These are prefixed with \$.
+
   </ul> 
   <h3><li> Template Syntax </h3></li>
   Vue compiles the templates into Virtual DOM render functions. Combined with the reactivity system, Vue is able to intelligently figure out the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes.
@@ -68,15 +69,25 @@ ps: for this project I will use the import method import Vue from "https://cdn.j
           
    </ul> 
   <h3><li> Computed Propertiers and Watchers </h3></li>
-    When you want a complex logic in your templates, you should use Computed Property, to dont make your template bloated and hard to maintain. <BASIC EXAMPLE>
+    When you want a complex logic in your templates, you should use Computed Property, to dont make your template bloated and hard to maintain. <a href="https://github.com/eriudo/LearningVueJS/tree/master/computedProperties"> EXAMPLE </a>
       <ul>
       <h4><li>Computed Properties</li></h4>
+      You can data-bind to computed properties in templates just like a normal property. Vue is aware that vm.reversedMessage depends on vm.message, so it will update any bindings that depend on vm.reversedMessage when vm.message changes. And the best part is that we’ve created this dependency relationship declaratively: the computed getter function has no side effects, which makes it easier to test and understand.
+      Instead of a computed property, we can define the same function as a method. For the end result, the two approaches are indeed exactly the same. However, the difference is that computed properties are cached based on their reactive dependencies. A computed property will only re-evaluate when some of its reactive dependencies have changed.
       <h4><li>Watchers</li></h4>
+      Watch option is the most useful when you want to perform asynchronous or expensive operations in response to changing data. <a href="https://github.com/eriudo/LearningVueJS/tree/master/watchers"> EXAMPLE </a>
+      In this case, using the watch option allows us to perform an asynchronous operation (accessing an API), limit how often we perform that operation, and set intermediary states until we get a final answer. None of that would be possible with a computed property.
      </ul> 
   <h3><li> Class and Style Bindings </h3></li>
+      Vue provides special enhances when v-bind is used with class and style, In addition to strings, the expressions can also evaluate to objects or arrays.
       <ul>
       <h4><li>Binding HTML Classes</li></h4>
+          We can pass an object to v-bind:class to dynamically toggle classes, you can have multiple classes toggled by having more fields in the object. In addition, the v-bind:class directive can also co-exist with the plain class attribute. <a href="https://github.com/eriudo/LearningVueJS/tree/master/class-style-bindings"> EXAMPLE </a>
+          PS: We can pass an array to v-bind:class to apply a list of classes. If you would like to also toggle a class in the list conditionally, you can do it with a ternary expression.
       <h4><li>Binding Inline Styles</li></h4>
+        The object syntax for v-bind:style is pretty straightforward - it looks almost like CSS, except it’s a JavaScript object. You can use either camelCase or kebab-case (use quotes with kebab-case) for the CSS property names: <a href="https://github.com/eriudo/LearningVueJS/tree/master/class-style-bindings"> EXAMPLE </a>
+        PS: Again, the object syntax is often used in conjunction with computed properties that return objects.
+        PS2: When you use a CSS property that requires vendor prefixes in v-bind:style, for example transform, Vue will automatically detect and add appropriate prefixes to the applied styles.
      </ul> 
   <h3><li> Conditional Rendering</h3></li>
       <ul>
